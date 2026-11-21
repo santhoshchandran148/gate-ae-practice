@@ -1,0 +1,75 @@
+==================================================
+EXAM PRACTICE APP - HOW TO RUN
+==================================================
+
+1. INSTALL PYTHON & LIBRARIES (Only needed for PDF conversion)
+--------------------------------------------------
+Open your terminal (PowerShell or Command Prompt) in the "practice site" folder.
+
+  python -m venv .venv
+  .venv\Scripts\activate
+  
+  pip install -r requirements.txt
+
+
+2. CONVERT THE PDFs (Generate questions & answers)
+--------------------------------------------------
+Ensure your PDFs (AE.pdf and AE_Keys.pdf) are in the folder.
+
+  python convert.py AE.pdf --key AE_Keys.pdf --report
+
+Wait for the message "ALL CHECKS PASSED".
+This generates the data/questions.js, data/answers.js, and the images/ folder.
+
+
+3. RUN THE WEBSITE (Offline)
+--------------------------------------------------
+You do NOT need a server to use the app locally.
+
+1. Open File Explorer.
+2. Go to the "practice site" folder.
+3. Double-click "index.html".
+
+It will open in your default browser. 
+Note: Always use the same browser (e.g., Chrome) so your saved history stays intact.
+
+
+4. HOW TO TAKE AN EXAM
+--------------------------------------------------
+- Home: Select duration, number of questions, sections, and click "Start Exam".
+- Exam: 
+  - Use the palette on the left to jump to questions.
+  - Use the on-screen buttons or keyboard shortcuts.
+- Shortcuts:
+  - "1", "2", "3", "4" = Options A, B, C, D
+  - "Shift + N" = Next
+  - "Shift + P" = Previous
+  - "Shift + S" = Skip
+  - "Shift + M" = Mark for Review
+  - "Shift + C" = Clear
+  - "Shift + Z" = Zoom image
+- Submit: Click "Submit" in the top right. 
+- Results: Review your score, correct answers, and retry wrong questions.
+
+
+5. HOW TO HOST ON GITHUB PAGES (Optional)
+--------------------------------------------------
+1. Create a new repository on GitHub.com.
+2. Upload all files EXCEPT the .pdf files and the .venv folder.
+3. Go to repo Settings > Pages.
+4. Under "Build and deployment", select "Deploy from a branch".
+5. Choose "main" branch and "/ (root)" folder. Click Save.
+6. Wait 2 minutes. Your site is live at https://<your-username>.github.io/<repo-name>/
+
+IMPORTANT: If hosting on GitHub Pages, be careful about adding a token. 
+If the repo is PUBLIC, anyone can read your data/answers.js file.
+If you want privacy, make the repo PRIVATE or skip the GitHub sync feature.
+
+
+6. RESET ALL DATA (If something breaks)
+--------------------------------------------------
+1. Open index.html in your browser.
+2. Press F12 to open Developer Tools.
+3. Go to the "Console" tab.
+4. Type: localStorage.clear()
+5. Press Enter, then refresh the page (F5).
