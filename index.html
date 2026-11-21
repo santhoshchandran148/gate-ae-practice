@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam Practice</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar" role="banner">
+  <div class="brand">
+    <a href="#/home" class="brand-link" aria-label="Home">Exam Practice</a>
+  </div>
+  <nav class="topnav" aria-label="Main navigation">
+    <a href="#/home">Home</a>
+    <a href="#/history">History</a>
+    <a href="#/analytics">Analytics</a>
+    <a href="#/add">Add</a>
+    <a href="#/verify">Verify</a>
+    <a href="#/how">How it works</a>
+  </nav>
+  <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">◐</button>
+</header>
+
+<main id="main" role="main" tabindex="-1"></main>
+
+<div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+<div id="modal-root" class="modal-root" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h2 id="modal-title" class="modal-title"></h2>
+    <div class="modal-body"></div>
+    <div class="modal-actions"></div>
+  </div>
+</div>
+
+<!-- Data -->
+<script src="data/questions.js"></script>
+
+<!-- Core -->
+<script src="js/storage.js"></script>
+<script src="js/state.js"></script>
+<script src="js/ui.js"></script>
+
+<!-- Modules -->
+<script src="js/scoring.js"></script>
+<script src="js/exam.js"></script>
+<script src="js/results.js"></script>
+<script src="js/analytics.js"></script>
+
+<!-- New Pages (Make sure these exist!) -->
+<script src="js/addquestions.js"></script>
+<script src="js/verify.js"></script>
+
+<!-- Router -->
+<script src="js/app.js"></script>
+
+</body>
+</html>
